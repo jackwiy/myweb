@@ -1,0 +1,84 @@
+# myweb
+myweb-Web目录结构设计
+
+``````
+myweb
+├── app-核心代码
+│   ├── Console-命令行
+│   ├── Contracts-合同接口
+│   ├── Events-事件
+│   ├── Exceptions-异常
+│   ├── helpers.php-辅助函数
+│   ├── HTTP-包含了控制器、中间件和请求
+│   │   ├── Controllers-控制器
+│   │   │   ├── Backend-后端控制器
+│   │   │   │   └── UserController.php-后端用户控制器
+│   │   │   └── Frontend-前端控制器
+│   │   ├── Kernel.php-配置中间件
+│   │   ├── Midleware-中间件
+│   │   │   ├── Authenticate.php-未授权跳转中间件
+│   │   │   └── RedirectIfAuthenticated.php-授权验证中间件
+│   │   ├── Requests-请求表单验证
+│   │   └── Resources-第三方资源
+│   ├── Jobs-队列
+│   ├── Listeners-监听
+│   ├── Mail-邮件
+│   ├── Modes-模型
+│   │   └── User.php-用户模型
+│   ├── Notifications-通知
+│   ├── Providers-服务提供者
+│   ├── Repositories-存储库
+│   ├── Rules-自定义表单验证
+│   ├── Services-服务
+│   └── Utils-工具库
+├── bootstrap-启动目录
+│   └── app.php-用于框架的启动和自动载入配置
+├── composer.json-后端第三方包
+├── config-应用所有的配置文件
+│   ├── app.php-框架配置加载
+│   └── database.php-数据库配置
+├── database-数据库迁移文件及填充文件
+│   ├── migrations-迁移表
+│   └── seeds-填充数据
+├── package.json-前端第三方包
+├── public-前端资源文件
+│   ├── css-样式
+│   ├── favicon.ico-图标
+│   ├── fonts-字体
+│   ├── images-图片
+│   ├── index.php-应用入口文件
+│   ├── js-编译后js
+│   └── robots.txt-爬虫限制
+├── resources-应用视图文件和未编译的原生前端资源文件
+│   ├── js-未编译js-React-Vue
+│   ├── lang-多语言
+│   ├── sass-未编译css
+│   └── views-视图模板
+│       ├── backend-后端视图
+│       │   └── user-用户视图
+│       │       ├── create.blade.php
+│       │       ├── edit.blade.php
+│       │       ├── index.blade.php
+│       │       └── show.blade.php
+│       ├── frontend-前端视图
+│       └── welcome.blade.php-首页视图
+├── routes-应用定义的所有路由
+│   ├── api.php-Api路由
+│   └── web.php-Web路由
+├── storage-文件存储与日志
+│   ├── app-应用生成的文件
+│   ├── framework-框架生成的文件和缓存
+│   └── logs-日志
+├── tests-包含自动化测试文件
+└── vendor-第三方包
+    ├── jackwiy-第三方开发者
+    │   └── orm-数据库
+    │       ├── composer.json
+    │       ├── LICENSE.md
+    │       ├── README.md
+    │       └── src-源代码
+    │           └── Database-数据库底层链接
+    └── autoload.php-自动加载类
+
+51 directories, 25 files
+``````
