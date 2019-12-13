@@ -1,6 +1,7 @@
 # myweb
 myweb-Web目录结构设计
 
+``````
 myweb
 ├── app-核心代码
 │   ├── Console-命令行
@@ -80,3 +81,4 @@ myweb
     └── autoload.php-自动加载类
 
 51 directories, 25 files
+``````
